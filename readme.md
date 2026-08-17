@@ -5,7 +5,6 @@ A highly capable, Iron Man-inspired AI assistant featuring a holographic UI and 
 ## Features
 
 - **Holographic UI**: A sleek, translucent, draggable overlay built with PyQt6, featuring a responsive command input and real-time activity logging.
-- **Floating HUD Orb**: Integrated Next.js and Three.js 3D animated orb interface that reacts to voice and input.
 - **Deep System Integration**: Capable of automating web browser tasks, local device controls, searching files, and managing desktop environment.
 - **Memory & Intelligence**: Advanced vector-based memory for recalling past events and a deep intelligence scraping system for fetching context.
 
@@ -27,7 +26,6 @@ A highly capable, Iron Man-inspired AI assistant featuring a holographic UI and 
 - `main.py`: Main backend entry point for routing logic.
 - `actions/`: Automation scripts and capability modules.
 - `memory/`: Vector DB and context managers.
-- `orb/`: Next.js 3D Holographic HUD.
 
 ## Disclaimer
 

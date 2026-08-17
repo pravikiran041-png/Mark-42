@@ -2487,11 +2487,6 @@ class MainWindow(QMainWindow):
         self._qr_overlay: QROverlay | None = None
         self._screen_overlay: ScreenViewerOverlay | None = None
 
-        # Setup Orb Launcher (Disabled - using native PyQt orb)
-        # from core.orb_launcher import OrbLauncher
-        # self.orb_launcher = OrbLauncher(port=3000)
-        # self.orb_launcher.start()
-
         central = QWidget()
         central.setStyleSheet(f"background: #000000;")
         self.setCentralWidget(central)

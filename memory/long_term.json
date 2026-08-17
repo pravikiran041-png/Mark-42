@@ -1,0 +1,33 @@
+{
+  "identity": {
+    "language": {
+      "value": "Telugu",
+      "updated": "2026-08-16"
+    },
+    "name": {
+      "value": "Ravi Kiran",
+      "updated": "2026-08-15"
+    }
+  },
+  "preferences": {
+    "name_meaning_context": {
+      "value": "user clarification on name spelling",
+      "updated": "2026-08-15"
+    },
+    "favorite_food": {
+      "value": "None",
+      "updated": "2026-08-15"
+    }
+  },
+  "projects": {},
+  "relationships": {},
+  "wishes": {},
+  "notes": {},
+  "sessions": [
+    {
+      "date": "2026-07-24",
+      "summary": "The user listened to JARVIS report the news and then inquired about the source of the information.",
+      "language": "English"
+    }
+  ]
+}

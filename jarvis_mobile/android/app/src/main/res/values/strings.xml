@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_description">JARVIS Native Accessibility Service. This allows JARVIS to physically click and swipe on your screen.</string>
+</resources>

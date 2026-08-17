@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/mac/Documents/Mark-L-main/main.py", line 1635, in <module>
+    main()
+    ~~~~^^
+  File "/Users/mac/Documents/Mark-L-main/main.py", line 1621, in main
+    ui = JarvisUI("face.png")
+  File "/Users/mac/Documents/Mark-L-main/ui.py", line 3130, in __init__
+    self._win = MainWindow(face_path)
+                ~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/mac/Documents/Mark-L-main/ui.py", line 1639, in __init__
+    self._tick_clock()
+    ~~~~~~~~~~~~~~~~^^
+  File "/Users/mac/Documents/Mark-L-main/ui.py", line 2341, in _tick_clock
+    self._clock_lbl.setText(time.strftime("%H:%M:%S"))
+    ^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute '_clock_lbl'. Did you mean: '_clock_tmr'?

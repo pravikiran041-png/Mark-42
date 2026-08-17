@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/mac/Documents/Mark-L-main/main.py", line 1635, in <module>
+    main()
+    ~~~~^^
+  File "/Users/mac/Documents/Mark-L-main/main.py", line 1621, in main
+    ui = JarvisUI("face.png")
+  File "/Users/mac/Documents/Mark-L-main/ui.py", line 3147, in __init__
+    self._win = MainWindow(face_path)
+                ~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/mac/Documents/Mark-L-main/ui.py", line 1664, in __init__
+    self._log_sig.connect(self._log.append_log)
+                          ^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute '_log'

@@ -59,7 +59,7 @@ def try_gemini_free(prompt: str, system: str, max_tokens: int, key: str) -> str 
     if not key: return None
     try:
         response = requests.post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}",
+            f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key={key}",
             json={
                 "contents": [{
                     "parts": [{"text": f"{system}\n\n{prompt}"}]

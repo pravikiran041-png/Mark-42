@@ -62,7 +62,6 @@ def free_port(port):
         pass
 
 # Call before starting servers
-free_port(8766)
 free_port(9596)
 free_port(9597)
 
@@ -1582,7 +1581,7 @@ class JarvisLive:
             client = _genai.Client(api_key=_get_api_key())
             resp   = await asyncio.to_thread(
                 client.models.generate_content,
-                model="gemini-1.5-flash",
+                model="gemini-3.6-flash",
                 contents=prompt,
             )
             summary = (resp.text or "").strip()
@@ -1874,14 +1873,8 @@ def main():
     ui = JarvisUI("face.png")
 
     def runner():
-        # Start Mobile Companion WebSocket Server immediately so PAIR DEVICE works before API key is fully validated
-        from core.mobile_server import MobileWebSocketServer
-        mobile_ws = MobileWebSocketServer(port=8766)
-        mobile_ws.start(ui=ui)
-        
         ui.wait_for_api_key()
         jarvis = JarvisLive(ui)
-        jarvis._mobile_ws = mobile_ws
         try:
             asyncio.run(jarvis.run())
         except KeyboardInterrupt:

@@ -1093,7 +1093,7 @@ class DashboardServer:
             
             response = await asyncio.to_thread(
                 client.models.generate_content,
-                model="gemini-1.5-flash",
+                model="gemini-3.6-flash",
                 contents=[prompt, types.Part.from_bytes(data=jpeg_bytes, mime_type="image/jpeg")]
             )
             

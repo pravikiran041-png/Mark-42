@@ -44,6 +44,14 @@ class MainActivity : FlutterActivity() {
                 "checkService" -> {
                     result.success(JarvisAccessibilityService.instance != null)
                 }
+                "ask_chatgpt" -> {
+                    val prompt = call.argument<String>("prompt")
+                    if (prompt != null) {
+                        JarvisAccessibilityService.instance?.askChatGPT(prompt) { response ->
+                            runOnUiThread { result.success(response) }
+                        } ?: runOnUiThread { result.error("ERR", "Accessibility Service not running", null) }
+                    } else result.error("ERR", "Missing prompt", null)
+                }
                 else -> result.notImplemented()
             }
         }

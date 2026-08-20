@@ -23,7 +23,7 @@ def _gemini_search(query: str) -> str:
 
     client   = genai.Client(api_key=_get_api_key())
     response = client.models.generate_content(
-        model="gemini-1.5-flash",
+        model="gemini-3.6-flash",
         contents=query,
         config={"tools": [{"google_search": {}}]},
     )
@@ -124,7 +124,7 @@ def _gemini_headlines(n: int = 5) -> tuple[list[str], str]:
 
     client = genai.Client(api_key=_get_api_key())
     response = client.models.generate_content(
-        model="gemini-1.5-flash",
+        model="gemini-3.6-flash",
         contents=f"Current world news: {n} headlines. Numbered list, titles only.",
         config={"tools": [{"google_search": {}}]},
     )
@@ -261,7 +261,7 @@ def _reporter(query: str) -> str:
         try:
             from google import genai
             client = genai.Client(api_key=_get_api_key())
-            response = client.models.generate_content(model="gemini-1.5-flash", contents=fallback_query)
+            response = client.models.generate_content(model="gemini-3.6-flash", contents=fallback_query)
             text = "".join([p.text for p in response.candidates[0].content.parts if hasattr(p, "text") and p.text])
             return text.strip() if text else formatted_news
         except Exception as e2:

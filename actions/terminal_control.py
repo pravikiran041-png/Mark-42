@@ -77,7 +77,7 @@ def _summarize_output(command: str, output: str) -> str:
             client = genai.Client(api_key=api_key)
             prompt = f"Summarize the following terminal output for the command '{command}' in one or two short natural sentences suitable for a voice assistant to speak. Output ONLY the summary.\n\nOutput:\n{output[:4000]}"
             resp = client.models.generate_content(
-                model="gemini-1.5-flash",
+                model="gemini-3.6-flash",
                 contents=prompt,
             )
             return resp.text.strip()

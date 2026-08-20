@@ -74,7 +74,8 @@ class GhostEngine:
 
     def __init__(self, api_key: str, on_update=None, scan_interval: float = 4.0,
                  solver_mode: str = "phone_chatgpt", inject_mode: str = "type",
-                 phone_ip: str = "usb", phone_pin: str = "2580"):
+                 phone_ip: str = "usb", phone_pin: str = "2580",
+                 phone_chatgpt_callback=None):
         """
         Args:
             api_key:       Gemini API key
@@ -97,8 +98,9 @@ class GhostEngine:
         self.inject_mode = inject_mode
         self.phone_ip = phone_ip
         self.phone_pin = phone_pin
-        self._is_paused = False
-        self._state = "ACTIVE"
+        self.phone_chatgpt_callback = phone_chatgpt_callback
+        self._is_paused = True
+        self._state = "IDLE"
         
         # Start global hotkey listener for Panic Button
         try:
@@ -154,9 +156,13 @@ class GhostEngine:
     # ── Main Loop ───────────────────────────────────────────────────
 
     async def _loop(self):
-        await self._emit({"type": "ghost_log", "msg": "👻 Scanning screen..."})
+        await self._emit({"type": "ghost_log", "msg": "👻 Ghost Mode ready. Press Alt+Z to trigger."})
         while self._running:
             try:
+                if self._is_paused:
+                    await asyncio.sleep(self.scan_interval)
+                    continue
+
                 # 1. Read screen text
                 current_text = await self._read_screen()
 
@@ -177,34 +183,58 @@ class GhostEngine:
                 # 3. Check if content changed significantly
                 if self._should_trigger(current_text):
                     self._last_text = current_text
-                    await self._emit({
-                        "type": "ghost_screen_text",
-                        "text": current_text
-                    })
+                    print(f"[Ghost] 🎯 TRIGGERED on new content!", flush=True)
+                    try:
+                        await self._emit({"type": "ghost_screen_text", "text": current_text})
+                    except Exception:
+                        pass
 
                     # 4. Auto-answer if enabled
                     if self._auto_answer:
-                        await self._emit({"type": "ghost_log", "msg": f"🧠 Getting answer via {self.solver_mode}..."})
+                        # Prevent loop: immediately mark this text as handled so we don't spam if the answer fails
+                        self._last_answered_text = current_text
+                        
+                        print(f"[Ghost] 🧠 Getting answer via {self.solver_mode}...", flush=True)
+                        try:
+                            await self._emit({"type": "ghost_log", "msg": f"🧠 Getting answer via {self.solver_mode}..."})
+                        except Exception:
+                            pass
                         answer = await self._get_answer(current_text)
-                        if answer and not answer.startswith("[Error"):
+                        print(f"[Ghost] 📝 Answer received: {repr(answer[:100]) if answer else 'None'}...", flush=True)
+                        if answer and not answer.startswith("[Error") and not answer.startswith("Error:"):
                             self._last_answer = answer
-                            self._last_answered_text = current_text
-                            await self._emit({
-                                "type": "ghost_answer",
-                                "question": current_text[:200],
-                                "answer": answer
-                            })
-                            # Auto-inject answer silently to cursor on laptop
-                            await self._emit({"type": "ghost_log", "msg": f"⌨️ Injecting answer ({self.inject_mode} mode)..."})
-                            await self._do_inject(answer)
+                            try:
+                                await self._emit({"type": "ghost_answer", "question": current_text[:200], "answer": answer})
+                            except Exception:
+                                pass
+                            # Auto-inject answer silently to cursor on laptop if not 'none'
+                            if self.inject_mode.lower() != "none":
+                                print(f"[Ghost] ⌨️ Injecting answer ({self.inject_mode} mode)...", flush=True)
+                                try:
+                                    await self._emit({"type": "ghost_log", "msg": f"⌨️ Injecting answer ({self.inject_mode} mode)..."})
+                                except Exception:
+                                    pass
+                                await self._do_inject(answer)
+                                print(f"[Ghost] ✅ Injection complete!", flush=True)
+                            else:
+                                print(f"[Ghost] 🛑 inject_mode is 'none'. Skipping injection to laptop.", flush=True)
+                                try:
+                                    await self._emit({"type": "ghost_log", "msg": f"🛑 Answer received on phone. (Injection disabled)"})
+                                except Exception:
+                                    pass
                         elif answer:
-                            await self._emit({"type": "ghost_log", "msg": f"⚠️ {answer}"})
+                            print(f"[Ghost] ⚠️ Error answer: {answer[:100]}", flush=True)
+                            try:
+                                await self._emit({"type": "ghost_log", "msg": f"⚠️ {answer}"})
+                            except Exception:
+                                pass
 
                 await asyncio.sleep(self.scan_interval)
 
             except asyncio.CancelledError:
                 break
             except Exception as e:
+                print(f"[Ghost] ❌ EXCEPTION: {e}", flush=True)
                 await self._emit({"type": "ghost_log", "msg": f"❌ Error: {e}"})
                 await asyncio.sleep(self.scan_interval)
 
@@ -314,7 +344,7 @@ class GhostEngine:
 
             response = await asyncio.to_thread(
                 lambda: client.models.generate_content(
-                    model="gemini-1.5-flash",
+                    model="gemini-3.6-flash",
                     contents=[
                         {
                             "role": "user",
@@ -433,7 +463,7 @@ class GhostEngine:
 
             response = await asyncio.to_thread(
                 lambda: client.models.generate_content(
-                    model="gemini-1.5-flash",
+                    model="gemini-3.6-flash",
                     contents=prompt
                 )
             )
@@ -443,286 +473,18 @@ class GhostEngine:
             return f"[AI Error: {e}]"
 
     async def _get_answer_phone_chatgpt(self, question_text: str) -> str:
-        """Runs the Phone ChatGPT Route: connect -> unlock -> open ChatGPT -> paste question -> wait -> copy answer."""
-        import subprocess
-        ip = self.phone_ip or ""
-        pin = self.phone_pin
+        """Runs the Phone ChatGPT Route entirely natively on the phone over WebSocket (No ADB required)."""
+        await self._emit({"type": "ghost_log", "msg": "🤖 Asking ChatGPT natively on your phone..."})
         
-        adb_prefix = ["adb"]
-        if ip and ip != "usb":
-            await self._emit({"type": "ghost_log", "msg": f"📱 Connecting to phone {ip}..."})
-            connect_cmd = ["adb", "connect", f"{ip}:5555"]
-            proc = await asyncio.create_subprocess_exec(*connect_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            await proc.communicate()
-            adb_prefix = ["adb", "-s", f"{ip}:5555"]
-        else:
-            await self._emit({"type": "ghost_log", "msg": "📱 Connecting to phone via USB..."})
-        
-        # Check connection status
-        check_cmd = adb_prefix + ["get-state"]
-        proc = await asyncio.create_subprocess_exec(*check_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        stdout, stderr = await proc.communicate()
-        if b"device" not in stdout:
-            return f"[Error: Phone not detected via ADB ({'USB' if not ip or ip=='usb' else ip}). ADB state: {stdout.decode().strip()}]"
+        if not hasattr(self, 'phone_chatgpt_callback') or not self.phone_chatgpt_callback:
+            return "[Error: Native phone ChatGPT automation is not available. Please restart the daemon.]"
             
-        # 2. Wake phone if asleep
-        await self._emit({"type": "ghost_log", "msg": "📱 Waking screen..."})
-        proc = await asyncio.create_subprocess_exec(
-            *(adb_prefix + ["shell", "dumpsys", "power"]),
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE
-        )
-        stdout, _ = await proc.communicate()
-        is_awake = b"mWakefulness=Awake" in stdout
-        if not is_awake:
-            proc = await asyncio.create_subprocess_exec(
-                *(adb_prefix + ["shell", "input", "keyevent", "26"])
-            )
-            await proc.wait()
-            await asyncio.sleep(0.5)
-            
-        # 3. Unlock phone if locked
-        await self._emit({"type": "ghost_log", "msg": "📱 Checking lock screen..."})
-        proc = await asyncio.create_subprocess_exec(
-            *(adb_prefix + ["shell", "dumpsys", "window"]),
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE
-        )
-        stdout, _ = await proc.communicate()
-        output = stdout.decode()
-        is_locked = "mDreamingLockscreen=true" in output or \
-                    "isStatusBarKeyguard=true" in output or \
-                    "mShowingLockscreen=true" in output
-                    
-        if is_locked:
-            await self._emit({"type": "ghost_log", "msg": "📱 Unlocking screen..."})
-            proc = await asyncio.create_subprocess_exec(
-                *(adb_prefix + ["shell", "input", "swipe", "540", "1600", "540", "800", "300"])
-            )
-            await proc.wait()
-            await asyncio.sleep(0.8)
-            
-            if pin:
-                proc = await asyncio.create_subprocess_exec(
-                    *(adb_prefix + ["shell", "input", "text", pin])
-                )
-                await proc.wait()
-                await asyncio.sleep(0.2)
-                proc = await asyncio.create_subprocess_exec(
-                    *(adb_prefix + ["shell", "input", "keyevent", "66"])
-                )
-                await proc.wait()
-                await asyncio.sleep(0.8)
-                
-        # 4. Open ChatGPT and inject question text via Android Share Intent
-        await self._emit({"type": "ghost_log", "msg": "📱 Injecting question via Intent..."})
-        
-        # Get screen size to compute dynamic tap coordinates
-        width, height = 1080, 2400
-        proc = await asyncio.create_subprocess_exec(
-            *(adb_prefix + ["shell", "wm", "size"]),
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE
-        )
-        stdout, _ = await proc.communicate()
-        size_match = re.search(r"Physical size:\s*(\d+)x(\d+)", stdout.decode())
-        if size_match:
-            width, height = int(size_match.group(1)), int(size_match.group(2))
-        
-        # If this is an error, format the prompt so ChatGPT knows to fix it
-        lower_q = question_text.lower()
-        if "wrong answer" in lower_q or "compile error" in lower_q or "runtime error" in lower_q:
-            final_prompt = "The previous code failed with this error. Please fix it:\n\n" + question_text[:1000]
-        else:
-            final_prompt = question_text[:1000]
-            
-        # Robust escaping for Android shell (sh):
-        # 1. Escape single quotes as '\''
-        # 2. Wrap entire string in single quotes
-        escaped_text = final_prompt.replace("'", "'\\''")
-        safe_text = f"'{escaped_text}'"
-        
-        # This intent natively opens ChatGPT and pre-fills the input box with the text!
-        proc = await asyncio.create_subprocess_exec(
-            *(adb_prefix + ["shell", "am", "start", "-a", "android.intent.action.SEND", "-t", "text/plain", "--es", "android.intent.extra.TEXT", safe_text, "-n", "com.openai.chatgpt/.MainActivity"]),
-            stdout=subprocess.PIPE, stderr=subprocess.PIPE
-        )
-        await proc.wait()
-        
-        # Give ChatGPT time to open and animate the keyboard before tapping
-        await asyncio.sleep(2.0)
-        
-        # 5. Tap the Send button instantly
-        await self._emit({"type": "ghost_log", "msg": "📱 Tapping Send button..."})
-        
-        # UI Automator dump is too slow and buggy during keyboard animations.
-        # We know exactly where the Send button is proportionally on the screen:
-        # 1. If the keyboard is open, it's roughly at 52.5% height
-        # 2. If the keyboard is closed, it's roughly at 93% height
-        # The X coordinate is always at 92% width.
-        scx = int(width * 0.92)
-        scy_open = int(height * 0.525)
-        scy_closed = int(height * 0.93)
-        
-        # Tap the open keyboard location first
-        proc = await asyncio.create_subprocess_exec(
-            *(adb_prefix + ["shell", "input", "tap", str(scx), str(scy_open)])
-        )
-        await proc.wait()
-        await asyncio.sleep(0.5)
-        
-        # Tap the closed keyboard location next (in case keyboard didn't pop up)
-        proc = await asyncio.create_subprocess_exec(
-            *(adb_prefix + ["shell", "input", "tap", str(scx), str(scy_closed)])
-        )
-        await proc.wait()
-        await asyncio.sleep(0.5)
-        
-        # Final fallback: press Enter key
-        proc = await asyncio.create_subprocess_exec(
-            *(adb_prefix + ["shell", "input", "keyevent", "66"])
-        )
-        await proc.wait()
-        await asyncio.sleep(1.0)
-        
-        # 8. Wait for ChatGPT to generate response, then poll for answer
-        await self._emit({"type": "ghost_log", "msg": "📱 Waiting for ChatGPT response..."})
-        
-        # Poll multiple times — ChatGPT may take 5-20s depending on question complexity
-        answer = ""
-        for attempt in range(4):
-            wait_time = 5 if attempt == 0 else 4
-            await asyncio.sleep(wait_time)
-            await self._emit({"type": "ghost_log", "msg": f"📱 Extracting answer (attempt {attempt + 1}/4)..."})
-            answer = await self._extract_chatgpt_response(adb_prefix, question_text)
-            if answer and len(answer) > 10:
-                break
-        
-        if not answer:
-            answer = "[Error: Could not extract answer from screen layout]"
-            
-        return answer
-
-    async def _find_element_coords(self, adb_target, match_fn) -> tuple[int, int] | None:
-        import xml.etree.ElementTree as ET
-        adb_cmd = adb_target if isinstance(adb_target, list) else ["adb", "-s", f"{adb_target}:5555"]
         try:
-            proc = await asyncio.create_subprocess_exec(
-                *(adb_cmd + ["shell", "uiautomator", "dump", "/sdcard/window_dump.xml"]),
-                stdout=subprocess.PIPE, stderr=subprocess.PIPE
-            )
-            await proc.wait()
-            
-            proc = await asyncio.create_subprocess_exec(
-                *(adb_cmd + ["shell", "cat", "/sdcard/window_dump.xml"]),
-                stdout=subprocess.PIPE, stderr=subprocess.PIPE
-            )
-            stdout, _ = await proc.communicate()
-            xml_data = stdout.decode("utf-8", errors="ignore")
-            if not xml_data or "<hierarchy" not in xml_data:
-                return None
-                
-            root = ET.fromstring(xml_data)
-            for node in root.iter():
-                if match_fn(node.attrib):
-                    bounds = node.attrib.get("bounds", "")
-                    m = re.match(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]", bounds)
-                    if m:
-                        x1, y1, x2, y2 = map(int, m.groups())
-                        return (x1 + x2) // 2, (y1 + y2) // 2
+            answer = await self.phone_chatgpt_callback(question_text)
+            await self._emit({"type": "ghost_log", "msg": "✅ Native ChatGPT response received."})
+            return answer
         except Exception as e:
-            print(f"Error parsing layout: {e}")
-        return None
-
-    async def _extract_chatgpt_response(self, adb_target, question_text: str) -> str:
-        import xml.etree.ElementTree as ET
-        adb_cmd = adb_target if isinstance(adb_target, list) else ["adb", "-s", f"{adb_target}:5555"]
-        try:
-            proc = await asyncio.create_subprocess_exec(
-                *(adb_cmd + ["shell", "uiautomator", "dump", "/sdcard/window_dump.xml"]),
-                stdout=subprocess.PIPE, stderr=subprocess.PIPE
-            )
-            await proc.wait()
-            
-            proc = await asyncio.create_subprocess_exec(
-                *(adb_cmd + ["shell", "cat", "/sdcard/window_dump.xml"]),
-                stdout=subprocess.PIPE, stderr=subprocess.PIPE
-            )
-            stdout, _ = await proc.communicate()
-            xml_data = stdout.decode("utf-8", errors="ignore")
-            if not xml_data or "<hierarchy" not in xml_data:
-                return ""
-                
-            root = ET.fromstring(xml_data)
-            
-            # Collect text nodes ONLY from ChatGPT's package
-            chatgpt_texts = []
-            
-            for node in root.iter():
-                text = node.attrib.get("text", "").strip()
-                pkg = node.attrib.get("package", "")
-                res_id = node.attrib.get("resource-id", "")
-                role = node.attrib.get("class", "")
-                content_desc = node.attrib.get("content-desc", "").strip()
-                
-                if not text or len(text) < 3:
-                    continue
-                
-                # STRICTLY only collect from ChatGPT package — no fallback to other apps
-                if "openai" in pkg.lower() or "chatgpt" in pkg.lower():
-                    entry = {"text": text, "pkg": pkg, "res_id": res_id, "role": role, "desc": content_desc}
-                    chatgpt_texts.append(entry)
-            
-            # Only use ChatGPT-scoped texts — no fallback
-            candidates = chatgpt_texts
-            
-            # UI labels to ignore
-            ignored = {"chatgpt", "send", "copy", "share", "select", "regenerate",
-                       "good response", "bad response", "stop", "pause", "new chat",
-                       "message", "attach", "search", "gpt-4o", "gpt-4", "gpt-3.5",
-                       "explore gpts", "today", "yesterday", "previous 7 days",
-                       "message chatgpt", "you", "chatgpt said", "temporary chat",
-                       "fast answer", "reason", "search", "web search", "analyzing"}
-            
-            # Normalize question text for filtering
-            q_lower = question_text.lower().strip()
-            q_words = set(q_lower.split())
-            
-            valid_texts = []
-            for entry in candidates:
-                t = entry["text"]
-                t_lower = t.lower().strip()
-                
-                # Skip UI labels
-                if t_lower in ignored:
-                    continue
-                    
-                # Skip notification/status bar elements
-                if "statusbar" in entry["res_id"].lower() or "notification" in entry["res_id"].lower():
-                    continue
-                
-                # Skip input field text (EditText) — this is the user's typed question
-                if "EditText" in entry["role"]:
-                    continue
-                    
-                # Skip if text IS the user's question
-                if t_lower == q_lower:
-                    continue
-                t_words = set(t_lower.split())
-                if q_words and t_words and len(q_words) > 1:
-                    overlap = len(q_words & t_words) / max(len(q_words), len(t_words))
-                    if overlap > 0.8:
-                        continue
-                
-                # Skip very short single-word UI artifacts
-                if len(t) < 4 and " " not in t:
-                    continue
-                
-                valid_texts.append(t)
-                
-            if valid_texts:
-                # Return the longest text — ChatGPT responses are typically the longest text on screen
-                return max(valid_texts, key=len)
-        except Exception as e:
-            print(f"Error extracting response: {e}")
-        return ""
+            return f"[Error: Native Phone ChatGPT failed: {e}]"
 
     # ── Answer Injection ────────────────────────────────────────────
 
@@ -765,9 +527,18 @@ class GhostEngine:
                 
                 i = 0
                 while i < len(text):
+                    # Live abort check
+                    if self.inject_mode.lower() == "none":
+                        print("[Ghost] 🛑 Typing aborted because inject_mode was changed to 'none'!")
+                        break
+                        
                     # Panic Button check
                     while self._is_paused:
                         await asyncio.sleep(0.1)
+                        if self.inject_mode.lower() == "none":
+                            break
+                    if self.inject_mode.lower() == "none":
+                        break
                         
                     # Active App Check (Common Sense)
                     if ws and active_app_name:

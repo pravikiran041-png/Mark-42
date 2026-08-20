@@ -2256,16 +2256,36 @@ class QROverlay(QWidget):
         
     def _generate_qr(self):
         try:
-            from core.mobile_server import get_instance
-            server = get_instance()
-            if not server:
-                self.qr_lbl.setStyleSheet("color: red; font-size: 14px; font-weight: bold;")
-                self.qr_lbl.setText("Mobile server offline.\nPlease restart JARVIS.")
-                return
+            import os
+            import socket
             
-            data = server.generate_qr_data()
-            if not data:
-                raise ValueError("server.generate_qr_data() returned empty string!")
+            token_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "core", ".pairing_token")
+            if not os.path.exists(token_file):
+                self.qr_lbl.setStyleSheet("color: red; font-size: 14px; font-weight: bold;")
+                self.qr_lbl.setText("Daemon offline.\nPlease run ./start_ghost.sh")
+                return
+                
+            with open(token_file, "r") as f:
+                pairing_token = f.read().strip()
+                
+            try:
+                s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                s.connect(("8.8.8.8", 80))
+                ip = s.getsockname()[0]
+                s.close()
+            except Exception:
+                ip = "127.0.0.1"
+            
+            port = "8766"
+            ngrok_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "core", ".ngrok_url")
+            if os.path.exists(ngrok_file):
+                with open(ngrok_file, "r") as f:
+                    ngrok_url = f.read().strip()
+                if ngrok_url:
+                    ip = ngrok_url
+                    port = "443"
+                
+            data = f"jarvis://pair?ip={ip}&port={port}&token={pairing_token}"
                 
             import qrcode
             from PyQt6.QtGui import QPainter, QColor

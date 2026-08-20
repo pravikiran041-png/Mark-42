@@ -261,8 +261,16 @@ class GhostEngine:
             text = await asyncio.to_thread(self._read_ax_text)
             if text and len(text.strip()) > 10:
                 return text.strip()
+        # 3. Fallback to Windows UIAutomation (if on Windows and screenshot blocked)
+        if sys.platform == "win32":
+            try:
+                text = await asyncio.to_thread(self._read_uia_windows)
+                if text and len(text.strip()) > 10:
+                    return text.strip()
+            except Exception as e:
+                print(f"Windows UIA fallback failed: {e}")
 
-        # 3. Fallback to Gemini Vision OCR (if not on Mac/failed)
+        # 4. Fallback to Gemini Vision OCR (if everything else fails)
         return await self._read_screen_vision()
 
     def _read_ax_text(self) -> str:

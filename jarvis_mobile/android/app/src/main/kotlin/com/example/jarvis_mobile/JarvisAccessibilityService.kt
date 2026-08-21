@@ -97,15 +97,27 @@ class JarvisAccessibilityService : AccessibilityService() {
                 arguments.putCharSequence(android.view.accessibility.AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE, prompt)
                 inputNode.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_SET_TEXT, arguments)
                 kotlinx.coroutines.delay(1000)
+                inputNode.refresh()
+                
+                // Text Input Paste Fallback
+                if (inputNode.text?.toString() != prompt) {
+                    try {
+                        val clipboard = getSystemService(android.content.Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+                        val clip = android.content.ClipData.newPlainText("prompt", prompt)
+                        clipboard.setPrimaryClip(clip)
+                        inputNode.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_FOCUS)
+                        inputNode.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_PASTE)
+                        kotlinx.coroutines.delay(1000)
+                    } catch (e: Exception) {
+                        Log.e("JarvisAccessibility", "Clipboard fallback failed", e)
+                    }
+                }
                 
                 // 3. Find and click Send button
                 var sendClicked = false
                 val rootAfterPaste = rootInActiveWindow
                 if (rootAfterPaste != null) {
-                    var sendBtn = findSendButton(rootAfterPaste, strict = true)
-                    if (sendBtn == null) {
-                        sendBtn = findSendButton(rootAfterPaste, strict = false)
-                    }
+                    val sendBtn = findSendButton(rootAfterPaste)
                     if (sendBtn != null) {
                         sendBtn.performAction(android.view.accessibility.AccessibilityNodeInfo.ACTION_CLICK)
                         sendClicked = true
@@ -124,7 +136,7 @@ class JarvisAccessibilityService : AccessibilityService() {
                 var lastResponse = ""
                 var stableCount = 0
                 
-                for (i in 0..60) { // wait up to 30 seconds
+                for (i in 0..120) { // wait up to 60 seconds to handle slow internet
                     kotlinx.coroutines.delay(500)
                     val r = rootInActiveWindow ?: continue
                     val bubbles = findTextNodes(r).filter { it.text != null && it.text.toString() != prompt && !it.isEditable }
@@ -134,7 +146,7 @@ class JarvisAccessibilityService : AccessibilityService() {
                         val currentResponse = bubbles.last().text.toString()
                         if (currentResponse.length > 5 && currentResponse == lastResponse) {
                             stableCount++
-                            if (stableCount >= 4) { // stable for 2 seconds = finished
+                            if (stableCount >= 6) { // stable for 3 seconds = finished
                                 callback(currentResponse)
                                 return@launch
                             }
@@ -166,29 +178,47 @@ class JarvisAccessibilityService : AccessibilityService() {
         return null
     }
 
-    private fun findSendButton(node: android.view.accessibility.AccessibilityNodeInfo?, strict: Boolean = true): android.view.accessibility.AccessibilityNodeInfo? {
-        if (node == null) return null
-        val desc = node.contentDescription?.toString()?.lowercase() ?: ""
-        val text = node.text?.toString()?.lowercase() ?: ""
-        val id = node.viewIdResourceName?.lowercase() ?: ""
-        val className = node.className?.toString()?.lowercase() ?: ""
+    private fun findSendButton(node: android.view.accessibility.AccessibilityNodeInfo?): android.view.accessibility.AccessibilityNodeInfo? {
+        val allNodes = mutableListOf<android.view.accessibility.AccessibilityNodeInfo>()
+        fun collectNodes(n: android.view.accessibility.AccessibilityNodeInfo?) {
+            if (n == null) return
+            allNodes.add(n)
+            for (i in 0 until n.childCount) {
+                collectNodes(n.getChild(i))
+            }
+        }
+        collectNodes(node)
         
-        val isSendIndicator = desc.contains("send") || desc.contains("submit") || text.contains("send") || id.contains("send")
-        
-        if (strict) {
-            if (node.isClickable && isSendIndicator) return node
-            if (isSendIndicator && node.parent != null && node.parent.isClickable) return node.parent
-        } else {
-            // Fallback pass: Any clickable image/button that isn't clearly something else
-            val isIcon = className.contains("image") || className.contains("button")
-            val isNotOtherStuff = !desc.contains("menu") && !desc.contains("settings") && !desc.contains("attach") && !text.contains("menu")
-            if (node.isClickable && isIcon && isNotOtherStuff && text.isEmpty()) return node
+        // Strategy 1: Check contentDescription or text or viewIdResourceName for "send" or "submit"
+        for (n in allNodes) {
+            val desc = n.contentDescription?.toString()?.lowercase() ?: ""
+            val text = n.text?.toString()?.lowercase() ?: ""
+            val id = n.viewIdResourceName?.lowercase() ?: ""
+            
+            if (desc.contains("send") || desc.contains("submit") || text.contains("send") || id.contains("send")) {
+                if (n.isClickable) return n
+                if (n.parent?.isClickable == true) return n.parent
+            }
         }
         
-        for (i in 0 until node.childCount) {
-            val child = findSendButton(node.getChild(i), strict)
-            if (child != null) return child
+        // Strategy 2: Check for contentDescription containing "arrow" or "up"
+        for (n in allNodes) {
+            val desc = n.contentDescription?.toString()?.lowercase() ?: ""
+            if (desc.contains("arrow") || desc.contains("up")) {
+                if (n.isClickable) return n
+                if (n.parent?.isClickable == true) return n.parent
+            }
         }
+        
+        // Strategy 3: Find the last clickable ImageButton or ImageView in the entire UI
+        val imageButtons = allNodes.filter { 
+            val className = it.className?.toString()?.lowercase() ?: ""
+            (className.contains("imagebutton") || className.contains("imageview")) && it.isClickable
+        }
+        if (imageButtons.isNotEmpty()) {
+            return imageButtons.last()
+        }
+        
         return null
     }
 

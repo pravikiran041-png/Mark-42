@@ -994,3 +994,451 @@ Starting JARVIS Background Daemon...
 [MobileServer] Phone connected: ('127.0.0.1', 53710). Total: 2
 [MobileServer] Phone DISCONNECTED: no close frame received or sent
 [MobileServer] Phone removed. Remaining: 1
+[MobileServer] Phone connected: ('127.0.0.1', 53731). Total: 2
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 1
+[MobileServer] Phone connected: ('127.0.0.1', 54052). Total: 2
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 1
+[MobileServer] Phone connected: ('127.0.0.1', 54054). Total: 2
+[MobileServer] Phone connected: ('127.0.0.1', 54056). Total: 3
+[MobileServer] Phone connected: ('127.0.0.1', 54058). Total: 4
+[MobileServer] Phone connected: ('127.0.0.1', 54060). Total: 5
+[MobileServer] Phone connected: ('127.0.0.1', 54063). Total: 6
+[MobileServer] Phone connected: ('127.0.0.1', 54064). Total: 7
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 6
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 5
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 4
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 3
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 2
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 1
+[MobileServer] Phone connected: ('127.0.0.1', 54070). Total: 2
+[MobileServer] Phone connected: ('127.0.0.1', 54073). Total: 3
+[MobileServer] Phone connected: ('127.0.0.1', 54074). Total: 4
+[MobileServer] Phone connected: ('127.0.0.1', 54076). Total: 5
+[MobileServer] Phone connected: ('127.0.0.1', 54081). Total: 6
+[MobileServer] Phone connected: ('127.0.0.1', 54082). Total: 7
+[MobileServer] Phone connected: ('127.0.0.1', 54084). Total: 8
+[MobileServer] Phone connected: ('127.0.0.1', 54086). Total: 9
+[MobileServer] Phone connected: ('127.0.0.1', 54088). Total: 10
+[MobileServer] Phone connected: ('127.0.0.1', 54090). Total: 11
+[MobileServer] Phone connected: ('127.0.0.1', 54092). Total: 12
+[MobileServer] Phone connected: ('127.0.0.1', 54095). Total: 13
+[MobileServer] Phone connected: ('127.0.0.1', 54096). Total: 14
+[MobileServer] Phone connected: ('127.0.0.1', 54098). Total: 15
+[MobileServer] Phone connected: ('127.0.0.1', 54100). Total: 16
+[MobileServer] Phone connected: ('127.0.0.1', 54102). Total: 17
+[MobileServer] Phone connected: ('127.0.0.1', 54104). Total: 18
+[MobileServer] Phone connected: ('127.0.0.1', 54106). Total: 19
+[MobileServer] Phone connected: ('127.0.0.1', 54110). Total: 20
+[MobileServer] Phone connected: ('127.0.0.1', 54111). Total: 21
+[MobileServer] Phone connected: ('127.0.0.1', 54112). Total: 22
+[MobileServer] Phone connected: ('127.0.0.1', 54118). Total: 23
+[MobileServer] Phone connected: ('127.0.0.1', 54119). Total: 24
+[MobileServer] Phone connected: ('127.0.0.1', 54120). Total: 25
+[MobileServer] Phone connected: ('127.0.0.1', 54121). Total: 26
+[MobileServer] Phone connected: ('127.0.0.1', 54122). Total: 27
+[MobileServer] Phone connected: ('127.0.0.1', 54125). Total: 28
+[MobileServer] Phone connected: ('127.0.0.1', 54126). Total: 29
+[MobileServer] Phone connected: ('127.0.0.1', 54128). Total: 30
+[MobileServer] Phone connected: ('127.0.0.1', 54130). Total: 31
+[MobileServer] Phone connected: ('127.0.0.1', 54133). Total: 32
+[MobileServer] Phone connected: ('127.0.0.1', 54134). Total: 33
+[MobileServer] Phone connected: ('127.0.0.1', 54136). Total: 34
+[MobileServer] Phone connected: ('127.0.0.1', 54138). Total: 35
+[MobileServer] Phone connected: ('127.0.0.1', 54141). Total: 36
+[MobileServer] Phone connected: ('127.0.0.1', 54142). Total: 37
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 36
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 35
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 34
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 33
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 32
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 31
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 30
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 29
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 28
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 27
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 26
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 25
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 24
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 23
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 22
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 21
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 20
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 19
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 18
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 17
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 16
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 15
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 14
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 13
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 12
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 11
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 10
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 9
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 8
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 7
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 6
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 5
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 4
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 3
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 2
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 1
+[MobileServer] Phone removed. Remaining: 0
+[MobileServer] Phone connected: ('127.0.0.1', 54182). Total: 1
+[MobileServer] Phone removed. Remaining: 0
+[MobileServer] Phone connected: ('127.0.0.1', 54200). Total: 1
+[MobileServer] Phone connected: ('127.0.0.1', 54202). Total: 2
+[MobileServer] Ghost Mode started and UNPAUSED (scanning immediately)
+[Ghost] Read 1973 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[MobileServer] Ghost Mode started and UNPAUSED (scanning immediately)
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 1969 chars. Meaningful: False
+[Ghost] Rejected noise: 'mac@Macs-MacBook-Pro-217 ~ % cd /Users/mac/Documents/Mark-L-main\n© Scheduled Tasks\npythons main.py\nC'...
+[Ghost] Read 587 chars. Meaningful: True
+[Ghost] Accepted text: 'Sunday\nThursday\n10:38 PM\naveloc and...\n9:46 PM\n- CTECH 2... 2\nts,...\n8:47 PM\n/ravi-kiran...\n7:29 PM\n'...
+[Ghost] 🎯 TRIGGERED on new content!
+[Ghost] 🧠 Getting answer via phone_chatgpt...
+[MobileServer] Phone removed. Remaining: 1
+Screen stream loop error: Set changed size during iteration
+[MobileServer] Phone connected: ('127.0.0.1', 54208). Total: 2
+[MobileServer] Phone removed. Remaining: 1
+[MobileServer] Phone connected: ('127.0.0.1', 54212). Total: 2
+[MobileServer] Ghost Mode started and UNPAUSED (scanning immediately)
+[Ghost] Read 1830 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= C\n'...
+[Ghost] 🎯 TRIGGERED on new content!
+[Ghost] 🧠 Getting answer via phone_chatgpt...
+[Ghost] 📝 Answer received: 'Needed for screen/question reading'...
+[Ghost] ⌨️ Injecting answer (fuck you kiran mode)...
+[Ghost] 🎯 Locked onto application: Antigravity
+[Ghost] ✅ Injection complete!
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= CA'...
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= CA'...
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= CA'...
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= CA'...
+[Ghost] Read 1826 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[MobileServer] Ghost Mode started and UNPAUSED (scanning immediately)
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] 🎯 TRIGGERED on new content!
+[Ghost] 🧠 Getting answer via phone_chatgpt...
+[Ghost] 📝 Answer received: 'Error: Could not click Send button.'...
+[Ghost] ⚠️ Error answer: Error: Could not click Send button.
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= C\n'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= C\n'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1831 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= 07'...
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= C\n'...
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= C\n'...
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= C\n'...
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= C\n'...
+[Ghost] Read 1827 chars. Meaningful: True
+[Ghost] Accepted text: '• Scheduled Tasks\nPinned Conversations\nDesigning Friend Auction In...\nCa AuctionXI\n4mo\nProjects\n= C\n'...
+[MobileServer] Phone removed. Remaining: 1
+[MobileServer] Phone DISCONNECTED: no close frame received or sent
+[MobileServer] Phone removed. Remaining: 0
+Daemon shutting down...
+[Watchdog] ⚠️ Daemon is DEAD! Restarting... (attempt 1) at Thu Aug 20 23:32:06 IST 2026
+[Watchdog] ✅ Daemon restarted (PID: 16651)
+Starting JARVIS Background Daemon...
+[MobileServer] WebSocket server started on ws://0.0.0.0:8766
+[Ngrok] Starting Internet Tunnel (HTTPS)...
+[Ngrok] Tunnel online at: facsimile-radio-oxford.ngrok-free.dev
+t=2026-08-21T00:01:09+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=8821efb1aef3 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T00:01:09+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T00:02:35+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=4b3daf54b676 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T00:02:35+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T00:02:45+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp 13.59.170.248:443: i/o timeout"
+t=2026-08-21T00:02:59+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: EOF"
+t=2026-08-21T00:06:30+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=d50303aa4930 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T00:06:30+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T00:06:40+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp 3.133.228.214:443: i/o timeout"
+t=2026-08-21T00:06:51+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp 3.133.228.214:443: i/o timeout"
+t=2026-08-21T00:07:17+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=bc657547641d
+t=2026-08-21T00:07:17+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: session closed"
+t=2026-08-21T00:08:07+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=12e5f9dafb33 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T00:08:07+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T00:08:20+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: failed to fetch CRL. errors encountered: timed out fetching CRL"
+t=2026-08-21T01:53:48+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=29dd09fa744c clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T01:53:48+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T01:53:48+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T01:53:49+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T02:10:01+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=3a617d8bf161 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T02:10:01+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T02:26:21+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=5d3e2c3dcdaf clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T02:26:21+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T02:42:32+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=d6f4ea24154e clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T02:42:32+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session err="session closed" obj=csess id=3c354b00a4a9
+t=2026-08-21T02:59:48+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=542b713deb28 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T02:59:48+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session err="session closed" obj=csess id=3c354b00a4a9
+t=2026-08-21T03:15:58+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=7063cf1e92ee clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T03:15:58+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T03:32:19+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=9bb543bc808b clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T03:32:19+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T03:42:05+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session clientid=b1a6aeb943d448be7b7302733c4f0673 obj=csess id=3227387b5de7
+t=2026-08-21T03:42:05+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T03:58:25+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=99107d2b1c3a clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T03:58:25+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T04:14:36+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=c97d9751ec6a clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T04:14:36+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T04:30:56+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=6ef7f0f0428e clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T04:30:56+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T04:47:07+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=17d1507cb4a0 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T04:47:07+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session err="session closed" obj=csess id=3c354b00a4a9
+t=2026-08-21T05:03:27+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session clientid=b1a6aeb943d448be7b7302733c4f0673 obj=csess id=78c449c0aa5b
+t=2026-08-21T05:03:27+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session err="session closed" obj=csess id=3c354b00a4a9
+t=2026-08-21T05:19:37+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=0364cba6e7ee clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T05:19:37+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T05:35:47+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=7c5f8ace31ee clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T05:35:47+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T05:43:09+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="read tcp 192.168.1.38:55838->3.16.250.205:443: read: connection reset by peer"
+t=2026-08-21T05:43:24+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=972665e32411 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T05:59:40+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=9d09c00a256c clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T05:59:40+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session id=3c354b00a4a9 err="session closed" obj=csess
+t=2026-08-21T06:15:49+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=3fad9c4b88d4 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T06:15:49+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T06:32:10+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=e3b95ee124fe clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T06:32:10+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session err="session closed" obj=csess id=3c354b00a4a9
+t=2026-08-21T06:48:21+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=e6a76e543163 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T06:48:21+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session err="session closed" obj=csess id=3c354b00a4a9
+t=2026-08-21T07:04:31+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=eeb591f3ec6a clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T07:04:31+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session id=3c354b00a4a9 err="session closed" obj=csess
+t=2026-08-21T07:20:53+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=b168e82b9e20 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T07:20:53+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session err="session closed" obj=csess id=3c354b00a4a9
+t=2026-08-21T07:37:03+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=b4c4e9315b5e clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T07:37:03+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T07:53:23+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=37ecb581ab46 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T07:53:23+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T07:53:33+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T08:09:48+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=b84ccfec9fb8 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T08:09:48+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T08:25:57+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=63f82a6b5c4d clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T08:25:57+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session err="session closed" obj=csess id=3c354b00a4a9
+t=2026-08-21T08:42:18+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session clientid=b1a6aeb943d448be7b7302733c4f0673 obj=csess id=7d468ac8e8f6
+t=2026-08-21T08:42:18+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T08:58:28+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=12767b3ca822 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T08:58:28+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session id=3c354b00a4a9 err="session closed" obj=csess
+t=2026-08-21T09:14:48+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=bf10023a5a29 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T09:14:48+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T09:31:00+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=5e1f82e6954a clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T09:31:00+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T09:38:03+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=a084a97d0a01 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T09:38:03+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T09:54:23+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=15cf5f33db2d clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T09:54:23+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T10:05:19+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=debd773d5f32 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T10:05:19+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T10:21:50+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=7e007d7e46d5 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T10:21:50+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T10:21:51+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T10:21:51+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T10:21:52+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T10:21:54+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T10:21:58+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T10:22:06+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T10:22:22+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T10:24:33+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T10:56:31+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: read tcp 10.9.246.55:56091->3.12.62.205:443: read: connection reset by peer"
+t=2026-08-21T10:57:01+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: read tcp 10.9.246.55:56125->3.133.228.214:443: read: connection reset by peer"
+t=2026-08-21T11:00:21+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T12:06:33+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T12:07:03+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T13:07:43+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T13:08:13+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T14:08:39+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T14:09:09+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T14:16:58+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T14:20:06+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session id=0475d8d83ed3 clientid=b1a6aeb943d448be7b7302733c4f0673 obj=csess
+t=2026-08-21T14:20:06+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session err="session closed" obj=csess id=3c354b00a4a9
+t=2026-08-21T14:22:01+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="read EOF from remote peer"
+t=2026-08-21T14:22:11+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=2bc350b781c9 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T14:22:11+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:22:21+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:22:32+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:22:44+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:22:58+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:23:16+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:23:42+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:24:22+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:25:02+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:25:42+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:26:22+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:27:02+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:27:42+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:28:22+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:29:39+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:30:19+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:30:59+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:32:25+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:33:09+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:33:49+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:34:29+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:35:09+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:35:49+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:37:46+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:38:26+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:39:06+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:49:48+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:50:28+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T14:51:08+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T15:45:15+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T15:45:45+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T16:52:27+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T16:52:57+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T17:53:36+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session id=1e4088becb88 clientid=b1a6aeb943d448be7b7302733c4f0673 obj=csess
+t=2026-08-21T17:53:37+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T17:58:37+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=f1ac6a7657e7 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T17:58:37+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"
+t=2026-08-21T17:58:37+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T17:58:37+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T17:58:38+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T17:58:40+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T17:58:44+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T17:58:52+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T18:01:25+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T18:07:32+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=99b1d0cd82fc clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T18:07:32+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session id=3c354b00a4a9 err="session closed" obj=csess
+t=2026-08-21T18:07:32+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T18:07:33+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T18:07:34+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T18:07:36+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T18:07:40+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T18:07:48+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T18:08:04+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T19:09:18+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T19:09:48+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T19:54:34+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T19:55:04+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T20:32:52+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T20:33:22+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T20:33:52+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T20:34:22+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T20:34:52+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T20:35:22+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T20:35:52+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: no such host"
+t=2026-08-21T20:37:02+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=7debe0e972d2 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T20:37:02+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session id=3c354b00a4a9 err="session closed" obj=csess
+t=2026-08-21T20:37:12+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp 3.133.228.214:443: i/o timeout"
+t=2026-08-21T20:37:23+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp [2600:1f16:d83:1200:6d30:5f74:cb2a:101]:443: i/o timeout"
+t=2026-08-21T20:37:34+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp [2600:1f16:d83:1200:6d30:5f74:cb2a:101]:443: i/o timeout"
+t=2026-08-21T20:37:46+0530 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to dial ngrok server with address \"connect.us.ngrok-agent.com:443\": dial tcp: lookup connect.us.ngrok-agent.com: i/o timeout"
+t=2026-08-21T20:46:09+0530 lvl=eror msg="heartbeat timeout, terminating session" obj=tunnels.session obj=csess id=67e24c4e7621 clientid=b1a6aeb943d448be7b7302733c4f0673
+t=2026-08-21T20:46:09+0530 lvl=eror msg="session closed, starting reconnect loop" obj=tunnels.session obj=csess id=3c354b00a4a9 err="session closed"

@@ -58,6 +58,31 @@ if __name__ == "__main__":
             with open(ngrok_file, "w") as f:
                 f.write(url)
             print(f"[Ngrok] Tunnel online at: {url}")
+            
+            # Print QR code to terminal for the phone to scan
+            try:
+                import qrcode
+                import uuid
+                # Generate a new pairing token if needed
+                token_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "core", ".pairing_token")
+                if not os.path.exists(token_file):
+                    with open(token_file, "w") as tf:
+                        tf.write(str(uuid.uuid4()))
+                with open(token_file, "r") as tf:
+                    token = tf.read().strip()
+                
+                qr_data = f"{url}|443|{token}"
+                print("\n" + "="*50)
+                print("📱 SCAN THIS QR CODE WITH THE JARVIS PHONE APP 📱")
+                print("="*50 + "\n")
+                qr = qrcode.QRCode(version=1, box_size=1, border=2)
+                qr.add_data(qr_data)
+                qr.make(fit=True)
+                qr.print_ascii(invert=True)
+                print("\n==================================================\n")
+            except Exception as e:
+                print(f"Could not generate terminal QR: {e}")
+                
     except Exception as e:
         print(f"[Ngrok] Failed to start tunnel: {e}")
         
